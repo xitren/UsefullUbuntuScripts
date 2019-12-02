@@ -1,5 +1,6 @@
 mkdir ~/crontab_save/
-rm -fv ~/auto_check_crontab.sh
+rm -fv ~/auto_check_crontab.sh ~/crontab_save/crontab
+cat /etc/crontab > ~/crontab_save/crontab
 
 echo 'cat /etc/crontab > ~/crontab_save/new' >> ~/auto_check_crontab.sh
 echo 'DIFF=$(diff ~/crontab_save/new ~/crontab_save/crontab)' >> ~/auto_check_crontab.sh
