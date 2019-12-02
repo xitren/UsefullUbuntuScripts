@@ -12,5 +12,5 @@ echo 'else' >> ~/auto_check_crontab.sh
 echo '	echo "No changes on crontab!"' >> ~/auto_check_crontab.sh
 echo 'fi' >> ~/auto_check_crontab.sh
 
-echo '0  0    * * *   root    sh ~/auto_check_crontab.sh' | crontab
+( crontab -l | grep -v -F "sh ~/auto_check_crontab.sh" ; echo "*/5  *    * * *   root    sh ~/auto_check_crontab.sh" ) | crontab -
 crontab -l
