@@ -10,7 +10,6 @@ echo '	sudo sendmail xitren@ya.ru < ~/mail/mail_crontab.txt' >> ~/auto_check_cro
 echo '	rm ~/crontab_save/crontab' >> ~/auto_check_crontab.sh
 echo '	mv ~/crontab_save/new ~/crontab_save/crontab' >> ~/auto_check_crontab.sh
 echo 'else' >> ~/auto_check_crontab.sh
-echo '	echo "No changes on crontab!"' >> ~/auto_check_crontab.sh
 echo 'fi' >> ~/auto_check_crontab.sh
 
 ( crontab -l | grep -v -F "sh ~/auto_check_crontab.sh" ; echo "*/5  *    * * *   sh ~/auto_check_crontab.sh" ) | crontab -
