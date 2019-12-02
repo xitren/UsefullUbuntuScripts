@@ -1,5 +1,6 @@
-sudo mkdir .ssh
-sudo vim .ssh/authorized_keys -> paste pub key 
-sudo vim /etc/ssh/sshd_config (replace password autentification 'yes' to 'no')
+sudo mkdir ~/.ssh
+sudo nano ~/.ssh/authorized_keys
+rm -fv ~/.ssh/ssdh_config
+cp ./ssdh_config ~/.ssh/ssdh_config
 sudo service ssh restart
 sudo reboot
