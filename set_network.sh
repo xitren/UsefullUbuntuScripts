@@ -1,0 +1,1 @@
+sudo ifconfig eth0 192.168.72.6 netmask 255.255.255.252
