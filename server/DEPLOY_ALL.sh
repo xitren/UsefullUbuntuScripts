@@ -1,0 +1,16 @@
+sudo dos2unix STEP*
+sudo dos2unix sshd_config
+sudo dos2unix ssl_site.conf
+sudo dos2unix iptable
+sudo sh STEP1_SERVER_INSTALLING.sh
+sudo sh STEP2_SERVER_SSH_PUBKEY.sh
+sudo sh STEP3_SERVER_CHECK_CRONTAB.sh
+sudo sh STEP4_SERVER_AUTO_UPDATE.sh
+sudo sh STEP5_SERVER_SET_IPTABLE.sh
+sudo sh STEP6_SERVER_INSTALL_SSL.sh
+sudo sh STEP7_SERVER_REBOOT.sh
+rm -vf STEP*.sh
+rm -vf sshd_config
+rm -vf ssl_site.conf
+rm -vf iptable
+rm -vf sudoers
